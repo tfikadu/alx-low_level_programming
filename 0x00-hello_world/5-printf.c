@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Print a text
+ * main - Prints a text
  *
  * Return: Always 0 (Success)
  */
