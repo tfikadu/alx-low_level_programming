@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
  * main - lowercase and uppercase
@@ -7,20 +7,21 @@
  */
 int main(void)
 {
-	char C;
+	char c;
 	
-	for (C = 'a'; C <= 'z'; C++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		putchar(C);
+		putchar(c);
 	}
 
-	for (C = 'A'; C <= 'Z'; C++)
+	for (c = 'A'; c <= 'Z'; c++)
 	{
-		putchar(C);
+		putchar(c);
 	}
 
 	putchar('\n');
 
 	return (0);
 }
+
 
