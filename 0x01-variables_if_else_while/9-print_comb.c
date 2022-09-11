@@ -1,8 +1,9 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - Prints a series of numbers with commas
- * Return: Always (Success);
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
