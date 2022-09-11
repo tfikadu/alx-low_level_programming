@@ -1,25 +1,26 @@
 #include <stdio.h>
 
 /**
- * main-lowercase and uppercase
+ * main - lowercase and uppercase
  *
  * Return: Always (Success)
  */
 int main(void)
 {
 	char c;
-
-	for (c='a';c<='z';c++)
+	
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);
 	}
-	for (c='A';c<='Z';c++)
+
+	for (c = 'A'; c <= 'Z'; c++)
 	{
-		 putchar(c);   
+		putchar(c);
 	}
 
-	 putchar('\n');
+	putchar('\n');
 
-	 return (0);
+	return (0);
 }
 
