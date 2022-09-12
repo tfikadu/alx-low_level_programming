@@ -17,7 +17,7 @@ int main(void)
 		if (d != 99)
 		{
 			putchar(',');
-			putchar('');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
