@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - print possible combination of two 2-digit numbers
  *
@@ -22,8 +23,7 @@ int main(void)
 				putchar((p % 10) + '0');
 				if (i != 98)
 				{
-					
-					putchar(',');
+				        putchar(',');
 					putchar(' ');
 				}
 			}
