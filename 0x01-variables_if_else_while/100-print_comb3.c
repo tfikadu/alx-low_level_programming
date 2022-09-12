@@ -1,34 +1,27 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - print single digit numbers starting from 0
+ * main - Entry point
  *
- * Return: returns zero at the end
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i, j;
+	int d;
 
-	for (i = 0; i <= 9; i++)
+	for (d = 0; d < 100; d++)
 	{
-
-		for (j = 1; j <= 9; i++)
-
+		putchar((d / 10) + '0');
+		putchar((d % 10) + '0);
+		if (d != 99)
 		{
-			
-			if (j > i)
-			{
-				putchar(i + '0');
-				putchar(j + '0);
-				if (i != 8)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
+
 	return (0);
 }
 
