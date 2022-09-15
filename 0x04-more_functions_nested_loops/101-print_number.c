@@ -6,11 +6,11 @@
  * @n: The number to print
  */
 
-void print_number(int m)
+void print_number(int n)
 {
-	unsigned int num = m;
+	unsigned int num = n;
 
-	if (m < 0)
+	if (n < 0)
 	{
 		putchar('-');
 		num = -num;
