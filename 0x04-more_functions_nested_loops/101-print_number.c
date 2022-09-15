@@ -1,24 +1,29 @@
-#include <stdio.h>
 #include "main.h"
-
 /**
  * print_number - Prints a number
  * @n: The number to print
  */
-
-void print_number(int n)
+void print_number(int m)
 {
-	unsigned int num = n;
-
-	if (n < 0)
+	if (m < 0)
 	{
-		putchar('-');
-		num = -num;\
+		_putchar('-');
+		if (m < -9)
+			print_number(m / -10);
+		_putchar('0' - m % 10);
 	}
-	if (num > 9)
+	else
 	{
-		print_number(num / 10);
+		if (m > 9)
+			print_number(m / 10);
+		_putchar(m % 10 + '0');
 	}
-	putchar(num % 10 + '0');
 }
+
+
+
+
+
+
+
 
