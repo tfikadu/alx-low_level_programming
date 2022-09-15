@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * print_most_numbers - prints numbers except 2 and 4
+ * print_most_numbers - prints the numbers interleaved
  *
- * Return: returns nothing
+ * Return: numbers
  */
 void print_most_numbers(void)
 {
-	int n;
+	int numb;
 
 	for (numb = 48 ; numb <= 57 ; numb++)
 	{
