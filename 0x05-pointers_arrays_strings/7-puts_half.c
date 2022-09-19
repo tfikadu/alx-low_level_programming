@@ -1,4 +1,6 @@
-#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * puts_half - prints the second half of a string
