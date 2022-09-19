@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**\
  * puts_half - prints the second half of a string
@@ -6,6 +6,7 @@
  *
  * Return: void
  */
+
 void puts_half(char *str)
 {
 	int j, i = 0;
