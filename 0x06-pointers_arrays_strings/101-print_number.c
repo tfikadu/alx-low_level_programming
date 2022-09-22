@@ -12,4 +12,5 @@ void print_number(int n)
 		putchar(i%10);
 		printnumber((i-i%10)/10);
 	}
+}
 
