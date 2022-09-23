@@ -1,29 +1,32 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * print_number - Print an integer
- * @num: Number for printing
- *
- * Return: Nothing (void)
+ * print_number - that prints an integer
+ * @n: number to string
+ * Returnn: nothing
  */
 
-void print_number(int num)
+void print_number(int n)
 {
-	unsigned int firstnum = 0;
+	int pot_10 = 1, sign = 1, tmp = n;
 
-	if (num % 10 < 0)
+	while (tmp / 10)
 	{
-		_putchar('-');
-		firstnum = num * -1;
+		pot_10 *= 10;
+		tmp /= 10;
 	}
-	else
-		firstnum = num;
 
-	if (firstnum < 10)
-		_putchar((firstnum % 10) + '0');
-	else
+	if (tmp < 0)
 	{
-		print_number(firstnum / 10);
-		_putchar((firstnum % 10) + '0');
+		sign *= -1;
+		_putchar('-');
+	}
+	while (pot_10 > 0)
+	{
+		tmp = n / pot_10;
+		_putchar((tmp * sign) + '0');
+		n = n - (tmp * pot_10);
+		pot_10 /= 10;
 	}
 }
 
