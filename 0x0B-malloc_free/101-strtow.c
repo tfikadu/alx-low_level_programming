@@ -4,8 +4,7 @@
 
 /**
  * number - function to calculate number of words
- *  @str: string being passed to check for words
- *
+ *  @str: string being passed to check for word
  *  Return: number of words
  */
 int number(char *str)
