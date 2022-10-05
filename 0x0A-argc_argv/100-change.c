@@ -9,6 +9,7 @@
  * @i: Passed in variable from main for calculations
  * Return: The number of coins needed minimum for the passed in variable
  */
+
 int coinConverter(int i)
 {
 	int count = 0;
