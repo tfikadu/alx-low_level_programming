@@ -1,6 +1,6 @@
 /*
  * File: 100-reverse_listint.c
- * 
+ * Auth: tfikadu
  */
 
 #include "lists.h"
