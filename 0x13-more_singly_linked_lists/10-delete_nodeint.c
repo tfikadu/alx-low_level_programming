@@ -1,6 +1,6 @@
 /*
  * File: 10-delete_nodeint.c
- * 
+ * Auth: tfikadu
  */
 
 #include "lists.h"
