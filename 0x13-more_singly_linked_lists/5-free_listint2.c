@@ -1,6 +1,6 @@
 /*
  * File: 5-free_listint2.c
- * Auth: Brennan D Baraban
+ * Auth: tfikadu
  */
 
 #include "lists.h"

@@ -1,6 +1,6 @@
 /*
  * File: 6-pop_listint.c
- * Auth: Brennan D Baraban
+ * Auth: tfikadu
  */
 
 #include "lists.h"
