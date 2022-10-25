@@ -1,6 +1,6 @@
 /*
  * File: 101-print_listint_safe.c
- * Auth: tfikadu 
+ * Auth: tfikadu
  */
 
 #include "lists.h"
