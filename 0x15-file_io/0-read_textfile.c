@@ -1,35 +1,44 @@
-#include "main.h"
-
-/**
- * read_textfile - reads a text file ans prints it to the POSIX standard output
- *
- * @filename: the path of the file
- * @letters: the number of letters it should read and print
- *
- * Return: number of letters it could read and print
- * or 0 if the file can't be opened, filename is NULL, or write fails
+/*
+ * File: 0-read_textfile.c
+ * Auth: tfikadu
  */
 
-ssize_t	read_textfile(const char *filename, size_t letters)
-{
-	int fd = open(filename, O_RDONLY);
-	ssize_t bytes = 0, write_o = -1;
-	char *buf = NULL;
+#include "main.h"
+#include <stdlib.h>
 
-	if (fd > -1 && filename)
+/**
+ * read_textfile - Reads a text file and prints it to POSIX stdout.
+ * @filename: A pointer to the name of the file.
+ * @letters: The number of letters the
+ *           function should read and print.
+ *
+ * Return: If the function fails or filename is NULL - 0.
+ *         O/w - the actual number of bytes the function can read and print.
+ */
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+	ssize_t o, r, w;
+	char *buffer;
+
+	if (filename == NULL)
+		return (0);
+
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
+
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
+
+	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
-		buf = malloc(sizeof(char) * (letters + 1));
-		if (buf)
-		{
-			bytes = read(fd, buf, letters);
-			buf[bytes] = '\0';
-			if (bytes > -1)
-				write_o = write(STDOUT_FILENO, buf, bytes);
-			free(buf);
-			close(fd);
-			if (write_o > -1)
-				return (bytes);
-		}
+		free(buffer);
+		return (0);
 	}
-	return (0);
+
+	free(buffer);
+	close(o);
+
+	return (w);
 }
